@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Realizar Pedido</title>
+        <link rel = "stylesheet" href="cadastrar.css"/>
+    </head>
+    <body>
+        <div id="container">
+            <div id="contents">
+                <h2>Confirme seus dados</h2>
+                <% if(logado === "nao") {%>
+                    <H3>Usuario invalido</H3>
+                <% } %>
+                <form method="POST" action="/login">
+                    <fieldset>
+                    <label>Informe seu CPF:</label>
+                    <input type="text" name="cpf" placeholder="Informe o CPF cadastrado"> <br> <br>
+                    <label>Informe seu nome: </label>
+                    <input type="text" name="nome" placeholder="Informe o nome cadastrado"> <br> <br>
+                    <input type="submit" value="Entrar">
+                    </fieldset>
+                </form> <br> <br>	
+                <a href="Cliente">Realizar Cadastro</a> <br> <br>
+                <a href="index.php">Início</a>
+            </div>
+        </div>
+    </body>
+</html>

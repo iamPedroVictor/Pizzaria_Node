@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Cadastro de Produtos</title>
+	<link rel = "stylesheet" href="cadastrar.css"/>
+</head>
+<body>
+	<div id="container">
+	<div id="contents">
+	<h2> Cadastro Produtos </h2>
+	<form method="POST" action="/Produto">
+		 <fieldset>
+		 <h2> -- Informações -- </h2>
+		<label>Nome: </label>
+		<input type="text" name="nome" placeholder=" Produto"><br><br>
+		<label>Preço: </label>
+		<input type="text" name="preco" placeholder="Preço"><br><br>
+		<label>Descrição: </label>
+		<input type="text" name="descricao" placeholder="descriçao"> <br> <br>
+		<label>Status: </label>
+		<input type="text" name="statusProduto" placeholder=" status"> <br> <br>
+		<label> Categoria: </label>
+		<table border="1">
+			<tr>
+				<td>Código</td>
+				<td>Nome</td>
+            </tr>
+            <% for(var i=0; i < categorias.length; i++) {%>
+                <tr>
+                  <td>
+                    <%= categorias[i].id %>
+                  </td>
+                  <td>
+                    <%= categorias[i].nome %>
+                  </td>
+                </tr>
+             <% } %>
+		</table> <br>
+		
+		<input type="text" name="idCategoria" placeholder=" id"> <br> <br>
+		<input type="submit" value="Cadastrar"> <br> <br>
+		 </fieldset>
+		<br><br>
+		<a href="/">HOME</a> 
+		
+	</form>
+	 </div>
+</div>
+</body>
+</html>

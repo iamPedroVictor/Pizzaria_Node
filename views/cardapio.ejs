@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Mostrar Produtos</title>
+    <link rel = "stylesheet" href="cadastrar.css"/>
+    <script src="cardapio.js"></script>
+</head>
+<body>
+<div id="container">
+<div id="contents">
+        <h2>Produtos do cardapio</h2>
+        <h3><%=cliente %></h3>
+        <table>
+            <% for(var i=0; i < produtos.length; i++) {%>
+                <tr>
+                    <td>
+                        <%= produtos[i].nome %>
+                    </td>
+                    <td>
+                        R$<%= produtos[i].preco %>
+                    </td>
+                    <td>
+                        <button onclick="add(<%= produtos[i].id %>)">Adicionar ao carrinho</button>
+                    </td>
+                    <td>
+                        <button onclick="remove(<%= produtos[i].id %>)">Remover do carrinho</button>
+                    </td>
+                </tr>
+             <% } %>
+        </table>
+        <a href="/Carrinho">Ver Carrinho</a> <br> <br>
+        <a href="/Sair">Sair</a> <br> <br>
+ </fieldset>
+ </form>
+    </div>
+</div>
+</body>
+</html>
