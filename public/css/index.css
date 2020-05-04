@@ -1,0 +1,171 @@
+body  {
+    /*
+    background-repeat: repeat;
+    background-attachment: fixed;*/
+    background-image: url("/img/background.jpg");
+	background-size:1090px 1090px;
+	background-repeat:repeat;
+
+}
+
+#container  {
+    margin: auto;  /* define o tamanho das margens – todas as margens com tamanho auto */
+    width: 1090px;
+    background-color:whitesmoke;
+}
+
+#header {
+    height: 150px;/* altura do elemento */
+	margin: 0 0 0 0;
+	background-image: url("/img/tijolos.jpg");
+	background-repeat:no-repeat;
+	background-size:1090px 200px;
+}
+
+.logo{
+    width: 400px;
+    height: 100px;
+    margin: 10px 0 0 20px;
+}
+
+#linha{
+    width: 1090px;
+    height: 6px;
+    background-color: #FF0000;
+    margin: 0 0 0 0;
+}
+
+#slide{
+    width: 1090px;
+	height: 400px;/* altura do elemento */
+    clear: both;
+ 	background-image: url("/img/header.jpg");
+    margin: 0 0 0 0;
+	background-repeat:no-repeat;
+	background-size:1090px 720px;
+}
+
+#mainnav {
+    width: 1090px;
+    height: 40px;
+    margin: -21px 0 20px 0;
+    clear: both;
+    background-color: #FF0000;
+}
+
+nav{
+    height: 0px;
+    font-family: High Tower Text;
+    font-weight: bold;
+   	float: left;
+    margin: 0 0 0 0;
+}
+nav ul {
+    height: auto;
+    padding: 10PX 0 0 10PX;
+    margin: 0px;
+}
+
+nav li{
+    display: inline;
+    padding: 0px;
+    margin: 0px;
+}
+
+nav li a{
+    text-decoration: none;
+    padding: 9px 6px 12px 6px;
+    font-family: High Tower Text;
+    font-size: 15px;
+    color: white;
+
+}
+nav a:hover{
+    background-color: #c1c1c1;
+    color: #5b5b5b;
+}
+
+
+.home{
+    background-color: whitesmoke;
+    color: #474747;
+}
+
+.clientes{
+    background-color: whitesmoke;
+    color: #474747;
+}
+
+.entregadores{
+    background-color: whitesmoke;
+    color: #474747;
+}
+
+.produtos{
+    background-color: whitesmoke;
+    color: #474747;
+}
+
+.pedidos{
+    background-color: whitesmoke;
+    color: #474747;
+}
+
+.categorias{
+    background-color: whitesmoke;
+    color: #474747;
+}
+
+
+.pesquisa{
+    float: right;
+    border: none;
+    margin: 5px 5px 0 0;
+}
+
+h2{
+    color: #474747;
+    font-family: High Tower Text;
+    font-size: 30px;
+    line-height: 5pt;
+    text-align: center;
+}
+
+p{
+    color: #333333;
+    font-family: Arial;
+    font-size: 17px;
+    line-height: 15pt;
+    text-align: justify;
+}
+
+#contents  {
+    float: center; /* posicionamento do elemento – localizado a esquerda */
+    width: 1074px; /* largura do elemento */
+    background-color:  whitesmoke; /* cor de fundo do elemento */
+    margin: 0 30px 0 0; /* define o tamanho das margens – margem superior com 0; direita com 0; inferior  com 0; e esquerda com 20px*/
+    padding: 8px 8px 8px 8px;
+	height: auto;
+}
+
+.topo{
+    float: right;
+
+}
+
+#footer  {
+    clear: both;  /* O elemento será posicionado abaixo da borda inferior de qualquer elemento, seja direita ou a esquerda */
+    color: white;
+    height: 30px;
+	background-image: url("/img/tijolos.jpg");
+	background-repeat:no-repeat;
+	background-size:1090px 200px;
+
+}
+
+.rodape{
+    font-family: High Tower Text;
+    color: white;
+    padding-top: 5px;
+    text-align: center;
+}

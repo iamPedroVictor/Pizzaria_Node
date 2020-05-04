@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const mysql = require('./src/database/MysqlConnection');
 const cookieParser = require('cookie-parser');
+const config = require('./src/config/config');
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
@@ -227,6 +228,6 @@ app.post('/Pedido', async (req,res) => {
     InsertDatabase(enderecoQuery, enderecoData, inserirPedido);
 });
   
-app.listen(3001, () => {
-    console.log('Example app listening on port 3001!');
+app.listen(process.env.PORT, () => {
+    console.log(`Example app listening on port ${config.port}!`);
 });
