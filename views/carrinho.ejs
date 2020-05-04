@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Carrinho</title>
+    <link rel = "stylesheet" href="cadastrar.css"/>
+    <script src="carrinho.js"></script>
+</head>
+<body>
+<div id="container">
+<div id="contents">
+        <h2>Carrinho</h2>
+        <fieldset>
+            <table>
+                <% for(var i=0; i < produtos.length; i++) {%>
+                    <tr>
+                        <td>
+                        <%= produtos[i].nome%>
+                        </td>
+                        <td>
+                        Preço: R$<%= produtos[i].preco %>
+                        </td>
+                        <td>
+                        Quantidade:<%= produtos[i].quantidade %>
+                        </td>
+                        <td>
+                        Total: <%= produtos[i].preco * produtos[i].quantidade %>
+                        </td>
+                        <td><button onclick="add(1)">+</button></td>
+                        <td><button onclick="remove(1)">-</button></td>
+                    </tr>
+                    <% } %>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Total do pedido:</td>
+                    <td> R$<%= TotalValor %></td>
+                </tr>
+            </table>
+        </fieldset>
+        <form method="POST" action="/Pedido">
+            <fieldset>
+                <h3>Informe o endereço de entrega</h3>
+                <label>Rua: </label>
+                <input type="text" name="rua" placeholder=" Informe a rua "><br><br>
+                <label>Bairro: </label>
+                <input type="text" name="bairro" placeholder=" Informe o bairro "><br><br>
+                <label>Número da casa </label>
+                <input type="text" name="numero" placeholder=" Informe o nº da casa "><br><br>
+                <input type="submit" value="Cadastrar"> <br> <br>
+            </fieldset>
+            <a href="/">HOME</a> <br> <br>
+        </form>
+    </div>
+</div>
+</body>

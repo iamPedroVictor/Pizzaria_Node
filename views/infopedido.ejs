@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Informações pedido</title>
+    <link rel = "stylesheet" href="cadastrar.css"/>
+    <script src="carrinho.js"></script>
+</head>
+<body>
+<div id="container">
+<div id="contents">
+        <h2>Pedido #<%= pedido %></h2>
+        <fieldset>
+            <table>
+                <% for(var i=0; i < pedido.length; i++) {%>
+                    <tr>
+                        <td>
+                        <%= produtos[i].nome_produto%>
+                        </td>
+                        <td>
+                        Preço: R$<%= produtos[i].preco_produto %>
+                        </td>
+                        <td>
+                        Quantidade:<%= produtos[i].quantidade %>
+                        </td>
+                        <td>
+                        Total: R$<%= Number(produtos[i].preco_produto * produtos[i].quantidade).toFixed(2) %>
+                        </td>
+                    </tr>
+                <% } %>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Total do pedido:</td>
+                    <td> R$<%= total %></td>
+                </tr>
+        </fieldset>
+        <span><a href="/">Home</a>
+    </div>
+</div>
+</body>

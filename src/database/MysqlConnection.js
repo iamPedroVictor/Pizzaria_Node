@@ -1,7 +1,7 @@
 const mysql = require('mysql');
 
 module.exports = {
-    conectarBanco(query, callback, error){
+    conectarBanco(query,callback, error, options = null ){
         const con = mysql.createConnection({
             host: "localhost",
             user: "root",
@@ -10,9 +10,8 @@ module.exports = {
         });
         con.connect(function(err){
             if (err) error(err);
-            con.query(query,function (err, result) {
+            con.query(query, options,function (err, result) {
                 if (err) throw err;
-                console.log("Resultado: ",result);
                 callback(result);
               });
         });

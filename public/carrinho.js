@@ -36,6 +36,7 @@ function add(id){
         pedidoJson.splice(ultimoIdMenor+1, 0, {id,quantidade:1});
     }
     createCookie(JSON.stringify(pedidoJson));
+    Location.reload(true);
 }
 
 function remove(id){
@@ -54,4 +55,5 @@ function remove(id){
         }
     }
     createCookie(JSON.stringify(pedidoJson));
+    Location.reload(true);
 }
